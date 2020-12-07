@@ -2,7 +2,7 @@ def unordered_sequential_search(arr, k):
     found = False
     pos = 0
 
-    while pos < len(arr):
+    while pos < len(arr) and not found:
         if arr[pos] == k:
             found = True
 
