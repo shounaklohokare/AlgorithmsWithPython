@@ -8,9 +8,9 @@ def selection_sort(arr):
 
             if arr[location]>arr[positionOfMax]:
                 positionOfMax=location
-
-            temp = arr[positionOfMax]
-            arr[positionOfMax]=arr[fillslot]
-            arr[fillslot]=temp
+                
+        temp = arr[positionOfMax]
+        arr[positionOfMax]=arr[fillslot]
+        arr[fillslot]=temp
 
     return arr
