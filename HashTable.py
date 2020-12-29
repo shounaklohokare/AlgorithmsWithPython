@@ -24,7 +24,7 @@ class HashTable:
                 rehashvalue = self.rehash(hashvalue, len(self.slots))
 
                 while self.slots[rehashvalue]!=None and self.slots[rehashvalue]!=key:
-                    self.rehash(rehashvalue, len(self.slots))
+                    rehashvalue = self.rehash(rehashvalue, len(self.slots))
 
                 self.slots[rehashvalue]=key
                 self.data[rehashvalue] = data
@@ -33,7 +33,7 @@ class HashTable:
     def hashfunction(self, key, size):
         return key % self.size
 
-    def rehash(self, oldhash, key, size):
+    def rehash(self, oldhash, size):
         return (oldhash+1)%size
 
 
